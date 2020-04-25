@@ -11,6 +11,7 @@ export class HeroesComponent implements OnInit {
   /*hero:string= 'Volkan Tolkan';*/
   myHero:Hero;
   heroList:Hero[];
+  selectedHero:Hero;
   constructor() { 
   
     this.myHero={
@@ -21,7 +22,13 @@ export class HeroesComponent implements OnInit {
     this.heroList= HeroList;
   }
 
+
   ngOnInit(): void {
+  }
+
+
+  onSelect(hero:Hero):void{
+    this.selectedHero=hero;
   }
 
 }
