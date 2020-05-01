@@ -16,15 +16,15 @@ export class HeroesComponent implements OnInit {
   _heroService:HeroService;
   _messageService : MessageService;
 
-  constructor(private heroService:HeroService,private messageService:MessageService) { 
-  
+  constructor(private heroService:HeroService,private messageService:MessageService) {
+
     this._heroService=heroService;
     this._messageService=messageService;
 
     this.myHero={
       id:1,
       name:'Volkan'
-    } 
+    }
   }
 
   private getHeroes():void{
@@ -41,5 +41,8 @@ export class HeroesComponent implements OnInit {
     this._messageService.add('HeroService: Selected hero id='+hero.id);
     this.selectedHero=hero;
   }
+   
+
+
 
 }
