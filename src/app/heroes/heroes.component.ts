@@ -29,7 +29,7 @@ export class HeroesComponent implements OnInit {
 
   private getHeroes():void{
     //Observable RxJs
-     this._heroService.getHeroes().subscribe(heroes=>this.heroList=heroes);
+     this._heroService.getHeroesFromHttp().subscribe(heroes=>this.heroList=heroes);
   }
 
   ngOnInit(): void {
@@ -42,7 +42,17 @@ export class HeroesComponent implements OnInit {
     this.selectedHero=hero;
   }
    
+  add(name:string):void{
+    name=name.trim();
+    if(!name) return;
+    this.heroService.addHero({name} as Hero).subscribe(hero=>{
+        this.heroList.push(hero);
+    });
+  }
 
-
+  delete(hero: Hero): void {
+    this.heroList = this.heroList.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe();
+  }
 
 }

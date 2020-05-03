@@ -9,7 +9,10 @@ import {Hero} from '../hero';
 export class HeroDetailComponent implements OnInit{
 @Input() hero:Hero;
 constructor(){
-
+   this.hero={
+       id:99,
+       name:'tosbaa'
+   };
 }
 ngOnInit():void{
 
