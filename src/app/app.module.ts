@@ -14,6 +14,7 @@ import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroDetailComponentNew} from './hero-detail-new/hero-detail-new.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {InMemoryDataService } from './inmemorydataservice';
+import {HeroSearchComponent} from './hero-search/hero-search.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {InMemoryDataService } from './inmemorydataservice';
     HeroesComponent,
     HeroDetailComponent,
     DashboardComponent,
-    HeroDetailComponentNew
+    HeroDetailComponentNew,
+    HeroSearchComponent
 
   ],
   imports: [
